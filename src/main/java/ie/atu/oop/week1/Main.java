@@ -7,24 +7,30 @@ public class Main {
     {
         System.out.println("hello");
 
-        Book firstBook = new Book();
-        firstBook.title = "Bune";
-        firstBook.author = "Brank Berbert";
-        firstBook.pageCount = 4;
+        Book firstBook = createBook("Bune","Brank Berbert",4);
+        Book secondBook = createBook("Bune 2 ","Balfs Bilsars",21);
+        Book thirdBook = createBook("Barry Botter ","Bames Bellman",53);
 
         firstBook.displayDetails();
+        secondBook.displayDetails();
+        thirdBook.displayDetails();
+
         System.out.println("\n");
         firstBook.borrowBook();
         System.out.println("\n");
         firstBook.displayDetails();
 
-        Book secondBook = new Book();
-        secondBook.title = "Bune 2";
-        secondBook.author = "Ralfs Vilsars";
-        secondBook.pageCount = 21;
-        secondBook.available = true;
 
-        secondBook.displayDetails();
 
     }
+
+    private static Book createBook(String title, String author, int pageCount)
+    {
+        Book book = new Book();
+        book.title = title;
+        book.author = author;
+        book.pageCount = pageCount;
+        return book;
+    }
 }
+
