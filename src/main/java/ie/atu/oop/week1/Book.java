@@ -15,6 +15,21 @@ public class Book {
         System.out.println("\n");
     }
 
+    public void borrowBook()
+    {
+        if (available)
+        {
+            available = false;
+            System.out.println("Borrowed successfully.");
+        }
+        else
+        {
+            System.out.println(title + " is not available.");
+        }
+
+    }
+
+
 
 }
 

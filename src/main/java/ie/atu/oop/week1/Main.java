@@ -13,6 +13,10 @@ public class Main {
         firstBook.pageCount = 4;
 
         firstBook.displayDetails();
+        System.out.println("\n");
+        firstBook.borrowBook();
+        System.out.println("\n");
+        firstBook.displayDetails();
 
         Book secondBook = new Book();
         secondBook.title = "Bune 2";
@@ -21,5 +25,6 @@ public class Main {
         secondBook.available = true;
 
         secondBook.displayDetails();
+
     }
 }
