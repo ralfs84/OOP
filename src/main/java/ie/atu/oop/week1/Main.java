@@ -7,27 +7,19 @@ public class Main {
     {
         System.out.println("hello");
 
-        Book firstbook = new Book();
-        firstbook.title = "Bune";
-        firstbook.author = "Brank Berbert";
-        firstbook.pageCount = 4;
+        Book firstBook = new Book();
+        firstBook.title = "Bune";
+        firstBook.author = "Brank Berbert";
+        firstBook.pageCount = 4;
 
-        System.out.println("This book is " + firstbook.title);
-        System.out.println("This book is written by  " + firstbook.author);
-        System.out.println("pages: " + firstbook.pageCount);
-        System.out.println("available: " + firstbook.available);
-        System.out.println("\n");
+        firstBook.displayDetails();
 
-        Book secondbook = new Book();
-        secondbook.title = "Bune 2";
-        secondbook.author = "Ralfs Vilsars";
-        secondbook.pageCount = 21;
-        secondbook.available = true;
+        Book secondBook = new Book();
+        secondBook.title = "Bune 2";
+        secondBook.author = "Ralfs Vilsars";
+        secondBook.pageCount = 21;
+        secondBook.available = true;
 
-        System.out.println("This book is " + secondbook.title);
-        System.out.println("This book is written by  " + secondbook.author);
-        System.out.println("pages: " + secondbook.pageCount);
-        System.out.println("available: " + secondbook.available);
-        System.out.println("\n");
+        secondBook.displayDetails();
     }
 }
