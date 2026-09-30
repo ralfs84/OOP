@@ -5,32 +5,19 @@ package ie.atu.oop.week1;
 public class Main {
     public static void main(String[] args)
     {
-        System.out.println("hello");
-
-        Book firstBook = createBook("Bune","Brank Berbert",4);
-        Book secondBook = createBook("Bune 2 ","Balfs Bilsars",21);
-        Book thirdBook = createBook("Barry Botter ","Bames Bellman",53);
-
-        firstBook.displayDetails();
-        secondBook.displayDetails();
-        thirdBook.displayDetails();
-
-        System.out.println("\n");
-        firstBook.borrowBook();
-        System.out.println("\n");
-        firstBook.displayDetails();
-
+        try
+        {
+            Book myBook = new Book("Dune", "", 123);
+            System.out.println(myBook.getTitle());
+            System.out.println(myBook.getAuthor());
+            System.out.println(myBook.getPageCount());
+        }
+        catch(IllegalArgumentException ex)
+        {
+            System.out.println(ex.getMessage());
+        }
 
 
     }
 
-    private static Book createBook(String title, String author, int pageCount)
-    {
-        Book book = new Book();
-        book.title = title;
-        book.author = author;
-        book.pageCount = pageCount;
-        return book;
-    }
 }
-

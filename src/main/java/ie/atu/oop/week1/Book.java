@@ -1,36 +1,46 @@
 package ie.atu.oop.week1;
 
-public class Book {
-    public String title;
-    public String author;
-    public int pageCount;
-    public boolean available = true;
-
-    public void displayDetails()
+public class Book
     {
-        System.out.println("This book is " + title);
-        System.out.println("This book is written by  " + author);
-        System.out.println("pages: " + pageCount);
-        System.out.println("available: " + available);
-        System.out.println("\n");
+        private String title;
+        private String author;
+        private int pageCount;
+
+        public Book(String title, String author , int pageCount )
+        {
+            if(title == null || title.isBlank())
+            {
+                throw new IllegalArgumentException("Title cannot be null or blank");
+            }
+            if(author == null || author.isBlank())
+            {
+                throw new IllegalArgumentException("Author cannot be null or blank");
+            }
+            if(pageCount <= 0)
+            {
+                throw new IllegalArgumentException("Page count cannot be less than 1");
+            }
+
+
+            this.title = title;
+            this.author = author;
+            this.pageCount = pageCount;
+        }
+
+        public String getTitle() {
+            return title;
+        }
+
+        public String getAuthor() {
+            return author;
+        }
+
+        public int getPageCount() {
+            return pageCount;
+        }
     }
 
-    public void borrowBook()
-    {
-        if (available)
-        {
-            available = false;
-            System.out.println("Borrowed successfully.");
-        }
-        else
-        {
-            System.out.println(title + " is not available.");
-        }
-
-    }
 
 
-
-}
 
 
