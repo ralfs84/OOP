@@ -2,9 +2,9 @@ package ie.atu.oop.week1;
 
 public class Book
     {
-        private String title;
-        private String author;
-        private int pageCount;
+        private final String title;
+        private final String author;
+        private final int pageCount;
         private BookStatus status;
 
 
@@ -44,6 +44,15 @@ public class Book
 
         public BookStatus getStatus() {
             return status;
+        }
+
+        public void BorrowBook()
+        {
+            if(status == BookStatus.ON_LOAN)
+            {
+                throw new IllegalStateException("Book is on loan.");
+            }
+            status = BookStatus.ON_LOAN;
         }
     }
 
