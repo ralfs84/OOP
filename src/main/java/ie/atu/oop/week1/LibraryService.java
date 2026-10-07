@@ -6,7 +6,7 @@ import java.util.List;
 public class LibraryService
 {
     private static final int MAX_LOAN_DAYS = 14;
-    private final List<Book> = new ArrayList<>();
+    private final List<Book> books = new ArrayList<>();
     public void loanBook(Book book, int loanDays)
     {
         if (book == null)
@@ -35,6 +35,15 @@ public class LibraryService
             {
             throw new NullPointerException("Book cant be null");
             }
-        Books.add(book);
+        books.add(book);
+    }
+    public int getBookCount()
+    {
+        return books.size();
+    }
+
+    public List<Book> getAllBooks()
+    {
+        return new ArrayList<>(books);
     }
 }
