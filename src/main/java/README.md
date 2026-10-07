@@ -24,7 +24,7 @@ book 1 is borrowed.\
 text that confirms the book is borrowed.\
 book 1 is printed again to show the change of availability.
 
-# OOP lab 1: Encapsulated Library
+# OOP lab 3: Encapsulated Library
 ## JDK version and Java package
 JDK 21+ BookTracker1-1.0
 

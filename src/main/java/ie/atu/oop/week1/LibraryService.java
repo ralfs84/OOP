@@ -1,8 +1,12 @@
 package ie.atu.oop.week1;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class LibraryService
 {
     private static final int MAX_LOAN_DAYS = 14;
+    private final List<Book> = new ArrayList<>();
     public void loanBook(Book book, int loanDays)
     {
         if (book == null)
@@ -25,5 +29,12 @@ public class LibraryService
         }
         book.ReturnBook();
     }
-
+    public void addBook(Book book)
+    {
+        if (book == null)
+            {
+            throw new NullPointerException("Book cant be null");
+            }
+        Books.add(book);
+    }
 }
