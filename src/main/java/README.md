@@ -75,4 +75,32 @@ The first book is available before the
 fifteen-day call because the bookReturn() is
 called which changes the status of book 1.
 
- 
+ ## Lab 4 Collections: Build a Library Catalogue
+The lab 4 changes in libraryService added an arraylist,findBookBytitle() and
+removeBook() and updated loanbook() and returnbook()  with search capabilities.
+
+
+List<Book> tells the compiler to list all the elements that
+belong to book.
+
+Final does not prevent book.add() because Final allows objects
+to change not variables. the components of the array may change
+but the variable list<book> books will always refer to the same
+array.
+
+
+The enhanced for loop variables represents a simple way to
+iterate arrays.
+
+findBookByTitle returns the title of searched book otherwise
+returns null.
+
+removeBook resues findBookByTitle as writing another search
+loop would be redundant code.
+
+main responsibilities are to add books to the library
+
+LibraryService responsibilities are to manage the book database e.g.
+
+Book responsibilities deals with the aspects of a single book e.g. page count
+, author or  name.
