@@ -104,3 +104,24 @@ LibraryService responsibilities are to manage the book database e.g.
 
 Book responsibilities deals with the aspects of a single book e.g. page count
 , author or  name.
+
+## lab 5 - Exceptions, CSV and Library Persistence
+State that Lab 5 adds exception handling and CSV persistence to the Library application.
+
+"throw" can signal that if there is a problem by throwing an exception and "catch" can catch
+an exception and perform recovery code to fix the issue.
+
+Path.of(...) tell where a file might be. one path method used in this lab was path.of()
+and one file method used was file.toAbsolutePath().
+
+The compiler does not require you to handle "uncheck NumberFormatException"
+and Can typically be prevented in contrast The compiler makes sure your code handles
+ checked IOException and cannot be ignored and are caused by unavoidable event.
+
+Path only tells where the location of a file is in the file system
+It does not actually create, read, write or delete files. files is what creates,reads or deletes files.
+
+CSV file:
+title,author,pageCount,status
+Dune,Frank Herbert,412,ON_LOAN
+Clean Code,Robert C. Martin,464,AVAILABLE
